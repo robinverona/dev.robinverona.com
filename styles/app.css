@@ -169,8 +169,6 @@ footer {
 @media (min-width: 768px) {
   footer {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(7px);
   }
 }
 footer a {

@@ -2,7 +2,7 @@ console.log('script loaded');
 
 var swiper = new Swiper(".mySwiper", {
     direction: "vertical",
-    slidesPerView: 1,
+    slidesPerView: 'auto',
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -11,7 +11,8 @@ var swiper = new Swiper(".mySwiper", {
     mousewheel: true,
     mousewheelControl: true, 
     parallax: true,
-    speed: 800,
+    speed: 600,
+    lazy: true,
     mousewheelOptions: {
         sensibility: 0.2,
         thresholdTime: 1000,
