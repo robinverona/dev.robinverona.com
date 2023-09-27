@@ -1,0 +1,12 @@
+@import './core/reset';
+@import './core/tokens';
+@import './core/typography';
+@import './core/variables';
+@import './core/mixins';
+
+@import './layout/base';
+@import './layout/header';
+@import './layout/footer';
+
+@import './components/swiper';
+@import './components/link';

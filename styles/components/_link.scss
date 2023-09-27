@@ -1,0 +1,75 @@
+.link {
+    overflow: hidden;
+    // padding: 7px 0;
+    position: relative;
+    display: inline-block;
+    line-height: 24px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.link svg {
+    display: none;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
+ a:focus {
+    /* Provide a fallback style for browsers
+    that don't support :focus-visible */
+    outline: none;
+    background: lightgrey;
+}
+
+a:focus:not(:focus-visible) {
+    /* Remove the focus indicator on mouse-focus for browsers
+    that do support :focus-visible */
+    background: transparent;
+}
+
+a:focus-visible {
+    /* Draw a very noticeable focus style for
+    keyboard-focus on browsers that do support
+    :focus-visible */
+    outline: 2px solid red;
+    background: transparent;
+}
+
+@include for-tablet-landscape-up {
+
+    .link {
+        overflow: hidden;
+        padding: 7px 0;
+        position: relative;
+
+        & svg {
+            display: block;
+        }
+    }
+
+    .link__graphic {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        fill: none;
+        stroke: #ffff64;
+        stroke-width: 3px;
+        
+    }
+
+    .link__graphic--slide {
+        top: -3px;
+        stroke-width: 3px;
+        transition: transform 0.7s;
+        transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+    }
+
+    .link:hover .link__graphic--slide {
+        transform: translate3d(-66.6%, 0, 0);
+    }
+
+   
+}

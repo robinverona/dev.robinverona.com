@@ -1,0 +1,290 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --color-primary: black;
+  --color-secondary: white;
+  --color-bg: var(--color-primary);
+  --color-on-bg: var(--color-secondary);
+  --color-success: #00d13c;
+  --color-alert: #FE1B00;
+  --color-warning: #ffcd29;
+  /* Fonts */
+  /* https://typescale.com/ */
+  --font-size-small: 0.667rem;
+  --font-size-regular: 1rem;
+  --font-size-large: 1.5rem;
+  --font-size-xl: 2.25rem;
+  --font-size-2xl: 3.375rem;
+  --font-size-3xl: 5.063rem;
+  --font-size-4xl: 7.594rem;
+  --font-family-sans: "sk-modernistregular";
+  --font-family-serif: "serif";
+  --font-family-mono: "disket_monoregular";
+  --text-body: var(--font-family-sans);
+  --text-headings: var(--font-family-sans);
+}
+
+@font-face {
+  font-family: "sk-modernistregular";
+  src: url("./../fonts/modernist/sk-modernist-regular-webfont.woff2") format("woff2"), url("./../fonts/modernist/sk-modernist-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Stanley";
+  src: url("./../fonts/stanley/Stanley.woff2") format("woff2"), url("./../fonts/stanley/Stanley.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+/* Breakpoints */
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--color-on-bg);
+  background-color: var(--color-bg);
+}
+
+.masthead {
+  position: sticky;
+  height: 72px;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.5vw;
+  z-index: 99;
+  background-color: var(--color-bg);
+}
+@media (min-width: 768px) {
+  .masthead {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(7px);
+  }
+}
+
+.brand, .who, header a {
+  font-size: var(--font-size-large);
+  font-family: var(--text-headings);
+  color: var(--color-on-bg);
+  mix-blend-mode: difference;
+}
+
+.brand {
+  color: #ffff64;
+  font-size: var(--font-size-xl);
+  letter-spacing: 3px;
+  font-family: "Stanley";
+}
+
+button {
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+}
+
+.who {
+  font-family: var(--text-headings);
+  color: var(--color-on-bg);
+}
+
+@media (min-width: 768px) {
+  .who {
+    transition: transform 0.4s ease;
+    cursor: pointer;
+  }
+  .who:hover {
+    transform: rotate(30deg);
+  }
+}
+footer {
+  position: fixed;
+  height: 72px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.5vw;
+  z-index: 99;
+}
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(7px);
+  }
+}
+footer a {
+  font-size: var(--font-size-large);
+  font-family: var(--text-headings);
+  color: var(--color-on-bg);
+  mix-blend-mode: difference;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide-active {
+  height: 100% !important;
+  margin-bottom: 0;
+}
+
+.swiper-slide a {
+  margin: 0 2.5vw;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.link {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  line-height: 24px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link svg {
+  display: none;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
+a:focus {
+  /* Provide a fallback style for browsers
+  that don't support :focus-visible */
+  outline: none;
+  background: lightgrey;
+}
+
+a:focus:not(:focus-visible) {
+  /* Remove the focus indicator on mouse-focus for browsers
+  that do support :focus-visible */
+  background: transparent;
+}
+
+a:focus-visible {
+  /* Draw a very noticeable focus style for
+  keyboard-focus on browsers that do support
+  :focus-visible */
+  outline: 2px solid red;
+  background: transparent;
+}
+
+@media (min-width: 768px) {
+  .link {
+    overflow: hidden;
+    padding: 7px 0;
+    position: relative;
+  }
+  .link svg {
+    display: block;
+  }
+  .link__graphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    fill: none;
+    stroke: #ffff64;
+    stroke-width: 3px;
+  }
+  .link__graphic--slide {
+    top: -3px;
+    stroke-width: 3px;
+    transition: transform 0.7s;
+    transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+  }
+  .link:hover .link__graphic--slide {
+    transform: translate3d(-66.6%, 0, 0);
+  }
+}
+
+/*# sourceMappingURL=app.css.map */
