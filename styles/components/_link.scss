@@ -2,13 +2,15 @@
     overflow: hidden;
     // padding: 7px 0;
     position: relative;
-    display: inline-block;
+    display: inline-flex;
     line-height: 24px;
+    text-decoration: none;
 
 }
 
 a {
     text-decoration: none;
+    color: var(--color-on-bg);
 }
 
 .link svg {
@@ -45,7 +47,7 @@ a:focus-visible {
         position: relative;
 
         & svg {
-            display: block;
+            display: inline-block;
         }
     }
 

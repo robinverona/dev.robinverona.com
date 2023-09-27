@@ -53,8 +53,8 @@ table {
 }
 
 :root {
-  --color-primary: black;
-  --color-secondary: white;
+  --color-primary: #0B0B0B;
+  --color-secondary: #dcdcdc;
   --color-bg: var(--color-primary);
   --color-on-bg: var(--color-secondary);
   --color-success: #00d13c;
@@ -102,7 +102,7 @@ html, body {
 }
 
 .masthead {
-  position: sticky;
+  position: fixed;
   height: 72px;
   top: 0;
   left: 0;
@@ -178,6 +178,40 @@ footer a {
   mix-blend-mode: difference;
 }
 
+.infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--text-body);
+  height: 100vh;
+}
+.infos h1 {
+  font-size: var(--font-size-xl);
+  text-align: center;
+  letter-spacing: 4px;
+  margin: 0px 0px 3rem;
+}
+@media (min-width: 768px) {
+  .infos h1 {
+    font-size: var(--font-size-3xl);
+    margin: 0px 0px 5rem;
+  }
+}
+.infos .bio {
+  font-size: var(--font-size-large);
+  max-width: 1000px;
+}
+.infos .bio p {
+  margin: 1rem 2.5vw;
+  line-height: 140%;
+}
+@media (min-width: 768px) {
+  .infos .bio {
+    padding-left: 3.5rem;
+  }
+}
+
 html,
 body {
   position: relative;
@@ -221,12 +255,13 @@ body {
 .swiper-slide img {
   display: block;
   width: 100%;
-  height: 600px;
+  height: 500px;
   object-fit: cover;
   border-radius: 20px;
 }
 @media (min-width: 768px) {
   .swiper-slide img {
+    height: 600px;
     transition: transform 0.5s ease, top 0.5s ease;
     will-change: transform;
   }
@@ -256,12 +291,14 @@ body {
 .link {
   overflow: hidden;
   position: relative;
-  display: inline-block;
+  display: inline-flex;
   line-height: 24px;
+  text-decoration: none;
 }
 
 a {
   text-decoration: none;
+  color: var(--color-on-bg);
 }
 
 .link svg {
@@ -297,7 +334,7 @@ a:focus-visible {
     position: relative;
   }
   .link svg {
-    display: block;
+    display: inline-block;
   }
   .link__graphic {
     position: absolute;

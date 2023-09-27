@@ -7,7 +7,7 @@ var swiper = new Swiper(".mySwiper", {
         el: ".swiper-pagination",
         clickable: true,
       },
-    spaceBetween: 30,
+    // spaceBetween: 30,
     mousewheel: true,
     mousewheelControl: true, 
     parallax: true,
