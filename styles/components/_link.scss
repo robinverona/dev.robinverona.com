@@ -57,7 +57,7 @@ a:focus-visible {
         left: 0;
         pointer-events: none;
         fill: none;
-        stroke: #ffff64;
+        stroke: var(--color-accent);
         stroke-width: 3px;
         
     }

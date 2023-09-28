@@ -57,6 +57,7 @@ table {
   --color-secondary: #dcdcdc;
   --color-bg: var(--color-primary);
   --color-on-bg: var(--color-secondary);
+  --color-accent: #ffff64;
   --color-success: #00d13c;
   --color-alert: #FE1B00;
   --color-warning: #ffcd29;
@@ -112,7 +113,7 @@ html, body {
   align-items: center;
   padding: 0 2.5vw;
   z-index: 99;
-  background-color: var(--color-bg);
+  background-color: transparent;
 }
 @media (min-width: 768px) {
   .masthead {
@@ -128,8 +129,8 @@ html, body {
 }
 
 .brand {
-  color: #ffff64;
-  font-size: var(--font-size-xl);
+  color: var(--color-on-bg);
+  font-size: var(--font-size-2xl);
   letter-spacing: 3px;
   font-family: "Stanley";
 }
@@ -212,6 +213,54 @@ footer a {
   }
 }
 
+article {
+  width: 90%;
+  max-width: 1000px;
+  margin: 5rem auto 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+article h1 {
+  text-align: center;
+  margin: 3rem 1rem;
+  margin-top: 0;
+  font-size: var(--font-size-3xl);
+  font-family: var(--text-headings);
+}
+@media (min-width: 768px) {
+  article h1 {
+    font-size: --font-size-3xl;
+  }
+}
+article img {
+  max-width: 100%;
+  height: 340px;
+  border-radius: 20px;
+}
+@media (min-width: 768px) {
+  article img {
+    max-width: 850px;
+    height: 540px;
+  }
+}
+article p {
+  font-family: var(--text-body);
+  font-size: var(--font-size-large);
+  margin: 1rem auto;
+  line-height: 140%;
+}
+article p:first-of-type {
+  margin-top: 3rem;
+}
+@media (min-width: 768px) {
+  article p {
+    width: 75%;
+    font-size: var(--font-size-large);
+  }
+}
+
 html,
 body {
   position: relative;
@@ -281,11 +330,12 @@ body {
 }
 
 .swiper-pagination-bullet {
-  background-color: rgba(255, 255, 100, 0.5);
+  background-color: rgba(var(--color-accent), 0.5);
+  border: solid 2px var(--color-accent);
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #ffff64;
+  background-color: var(--color-accent);
 }
 
 .link {
@@ -342,7 +392,7 @@ a:focus-visible {
     left: 0;
     pointer-events: none;
     fill: none;
-    stroke: #ffff64;
+    stroke: var(--color-accent);
     stroke-width: 3px;
   }
   .link__graphic--slide {

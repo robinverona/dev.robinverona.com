@@ -11,7 +11,7 @@
     z-index: 99;
     // border: greenyellow solid 1px;
     // margin-bottom: 30px;
-    background-color: var(--color-bg);
+    background-color: transparent;
     // background-color: var(--dark);
     @include for-tablet-landscape-up {
         // background-color: rgba($color: #000000, $alpha: 0.5);
@@ -29,8 +29,8 @@
 }
 
 .brand {
-    color: #ffff64;
-    font-size: var(--font-size-xl);
+    color: var(--color-on-bg);
+    font-size: var(--font-size-2xl);
     letter-spacing: 3px;
     font-family: 'Stanley';
 }

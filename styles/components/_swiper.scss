@@ -65,10 +65,11 @@ body {
 }
 
 .swiper-pagination-bullet {
-    background-color: rgba($color: #ffff64, $alpha: 0.5);
+    background-color: rgba($color: var(--color-accent), $alpha: 0.5);
+    border: solid 2px var(--color-accent);
     
 }
 
 .swiper-pagination-bullet-active{
-    background-color: #ffff64;
+    background-color: var(--color-accent);
 }
