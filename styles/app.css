@@ -54,7 +54,7 @@ table {
 
 :root {
   --color-primary: #0B0B0B;
-  --color-secondary: #dcdcdc;
+  --color-secondary: #fbfbfb;
   --color-bg: var(--color-primary);
   --color-on-bg: var(--color-secondary);
   --color-accent: #ffff64;
@@ -284,6 +284,10 @@ body {
   align-items: center;
 }
 
+.swiper-slide a:hover .overlay {
+  opacity: 1;
+}
+
 .swiper-slide-active {
   height: 100% !important;
   margin-bottom: 0 !important;
@@ -292,6 +296,7 @@ body {
 .swiper-slide a {
   margin: 0 2.5vw;
   color: var(--color-on-bg);
+  position: relative;
 }
 
 .swiper-slide h3 {
@@ -315,7 +320,7 @@ body {
     will-change: transform;
   }
   .swiper-slide img:hover {
-    transform: rotate(1deg);
+    transform: rotate(2deg);
   }
 }
 
